@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+int small(int x[],int );
+int large(int x[],int );
+int main()
+{
+    int n;
+   cout<<"enter the number"<<"\n";
+   cin>>n;
+   int arr[n];
+   for(int j=0;j<n;j++)
+   {
+       cin>>arr[j];
+   }
+    int small1=small(arr,n);
+    int large1=large(arr,n);
+    cout<<small1<<"\n";
+    cout<<large1<<"\n";
+    cout<<large1-small1;
+}
+int small(int x[],int n)
+{
+     int small1;
+    for(int i=0;i<n;i++)
+    {
+        if(x[0]>x[i])
+        {
+
+            x[0]=x[i];
+        }
+        small1=x[0];
+    }
+    return small1;
+}
+int large(int x[],int n)
+{
+    int large1;
+    for(int i=0;i<n;i++)
+    {
+        if(x[0]<x[i])
+        {
+            x[0]=x[i];
+        }
+        large1=x[0];
+    }
+    return large1;
+}
